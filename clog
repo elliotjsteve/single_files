@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+file='crnl'$(date +%Y%m%d.j)
+
+file_path=/Users/elliot/jobs/kernel/$file
+
+line='-----------------------------------------------------------------------------------\n'
+
+echo $line >> $file_path
+
+echo "At $(date +%H) Hours, $(date +%M) Minutes, $(date +%S) Seconds" >> $file_path
+
+echo $line >> $file_path
+
+vi $file_path

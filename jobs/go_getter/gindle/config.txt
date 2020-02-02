@@ -1,0 +1,2 @@
+export PATH=$PATH:~/custom_tools
+

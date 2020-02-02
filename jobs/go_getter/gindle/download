@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+echo 'running the getter'
+
+~/custom_tools/link_finder.py
+
+echo 'finished executing python script'
+
+download_link=$(cat load.txt)
+
+wget -P ~/Downloads/ $download_link
+
+rm load.txt
+
+touch load.txt

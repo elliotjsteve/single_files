@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+file_name=/Users/elliot/jobs/journal/$(date +%Y%m%d.j)
+
+line='-----------------------------------------------------------------------------------\n'
+
+echo $line >> $file_name
+
+echo "At $(date +%H) Hours, $(date +%M) Minutes, $(date +%S) Seconds" >> $file_name
+
+echo $line >> $file_name
+
+vi $file_name

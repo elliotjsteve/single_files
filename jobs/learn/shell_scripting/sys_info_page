@@ -1,0 +1,70 @@
+#!/bin/zsh
+
+#This Program outputs a HTML page
+
+#defining functions starts here
+
+report_uptime () {
+
+	cat << EOF
+		<h3>System Uptime:</h3> 
+		<p>$(uptime)</p>
+EOF
+	return
+	}
+
+report_disk_space () {
+
+	cat << madhu
+		Disk Space Utilization: 
+		<pre>$(df -h)</pre>
+madhu
+	return
+	}
+
+report_home_space () {
+
+	cat << vamsi
+		<h3>Home Space Utilization</h3>
+		<pre>$(du -sh /home/*)</pre>
+vamsi
+	return
+	}
+#defining variables ends here
+
+
+
+#defining variables starts here
+
+TAB_TITLE='System_info'
+
+PAGE_TITLE='System Information Report'
+
+CURRENT_TIME=$(date)
+
+TIME_STAMP="Generated at $CURRENT_TIME , by $USER"
+
+#defining variables ends here
+
+
+#program starts here
+
+cat << _EOF_
+<html>
+
+<head>
+
+<title>$TAB_TITLE</title>
+
+<head>
+
+<body>
+		<h1>$PAGE_TITLE</h1>
+		<h2><i>$TIME_STAMP</i></h2>
+		<pre>$(report_uptime)</pre>
+		<pre>$(report_disk_space)</pre>
+		<pre>$(report_home_space)</pre>
+</body>
+
+</html>
+_EOF_

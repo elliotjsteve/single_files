@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+#This is my first shell_script
+
+echo '\nHello, Shell!\n'

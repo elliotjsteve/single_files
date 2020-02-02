@@ -1,0 +1,4 @@
+>Each address and register in a 64-bit machine is 64 bits(8-bytes) long
+>push writes to stack
+>pop writes to register
+
